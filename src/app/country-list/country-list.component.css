@@ -1,0 +1,101 @@
+/* styles.scss */
+
+.country-list-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.country-list {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+  .country-list h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+
+  .country-list table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+  }
+
+  .country-list th,
+  .country-list td {
+    padding: 10px;
+    border: 1px solid #ccc;
+  }
+
+  .country-list th {
+    background-color: #f0f0f0;
+  }
+
+  .country-list td {
+    background-color: #fff;
+  }
+
+  .country-list tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+
+.create-country,
+.edit-country {
+  width: 50%;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f0f0f0;
+}
+
+  .create-country h2,
+  .edit-country h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+
+  .create-country form,
+  .edit-country form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .create-country label,
+  .edit-country label {
+    margin-bottom: 5px;
+  }
+
+  .create-country input,
+  .edit-country input {
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 14px;
+  }
+
+/* Styling for buttons */
+.country-list button {
+  padding: 8px 16px;
+  margin-right: 8px; /* Add space between buttons */
+  border: none;
+  border-radius: 3px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.country-list .delete-button {
+  background-color: #dc3545; /* Red color for delete button */
+  color: white;
+}
+
+.country-list .edit-button {
+  background-color: #007bff; /* Blue color for edit button */
+  color: white;
+}
+
+.country-list button:hover {
+  opacity: 0.8; /* Reduce opacity on hover for better visual feedback */
+}

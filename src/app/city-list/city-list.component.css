@@ -1,0 +1,76 @@
+
+/* styles for the table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid #ccc;
+}
+
+th, td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: left;
+}
+
+/* styles for buttons */
+button {
+  margin-right: 5px;
+}
+
+/* ensure spacing between buttons in the table */
+td button {
+  margin-right: 10px; /* add more space between buttons */
+}
+
+/* form container styles */
+.form-container {
+  margin-top: 20px;
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+  .form-container label {
+    display: block;
+    margin-bottom: 5px;
+  }
+
+  .form-container input {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 10px;
+  }
+
+/* custom margin classes */
+.mb-4 {
+  margin-bottom: 1.5rem;
+}
+
+.mt-3 {
+  margin-top: 1rem;
+}
+
+/* border styles */
+.border {
+  border: 1px solid #ccc;
+  padding: 1rem;
+  border-radius: 5px;
+}
+
+/* additional spacing for better layout */
+.form-group {
+  margin-bottom: 1rem;
+}
+
+/* faded select option style */
+select.form-control {
+  opacity: 0.8;
+}
+
+  select.form-control:focus {
+    opacity: 1;
+  }
+
+/* ensure consistent button styles */
+.btn {
+  margin-right: 10px;
+}

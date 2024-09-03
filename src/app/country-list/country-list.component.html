@@ -1,0 +1,82 @@
+<!-- country-list.component.html -->
+
+<div class="country-list-container">
+
+  <!-- Listing Section -->
+  <div class="country-list">
+    <h2>Country List</h2>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>ISO2</th>
+          <th>ISO3</th>
+          <th>Total Cities</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let country of countries">
+          <td>{{ country.id }}</td>
+          <td>{{ country.name }}</td>
+          <td>{{ country.iso2 }}</td>
+          <td>{{ country.iso3 }}</td>
+          <td>{{ country.totCities }}</td>
+          <td>
+            <button class="btn btn-danger" (click)="deleteCountry(country.id)">Delete</button>
+            <button class="btn btn-primary" (click)="editCountry(country)">Edit</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Create New Country Section -->
+  <div class="create-country" *ngIf="!editingCountry">
+    <h2>Create New Country</h2>
+    <form (submit)="createCountry()">
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" class="form-control" id="name" [(ngModel)]="newCountry.name" name="name" required>
+      </div>
+      <div class="form-group">
+        <label for="iso2">ISO2:</label>
+        <input type="text" class="form-control" id="iso2" [(ngModel)]="newCountry.iso2" name="iso2" required>
+      </div>
+      <div class="form-group">
+        <label for="iso3">ISO3:</label>
+        <input type="text" class="form-control" id="iso3" [(ngModel)]="newCountry.iso3" name="iso3" required>
+      </div>
+      <button type="submit" class="btn btn-success">Create</button>
+    </form>
+  </div>
+
+
+  <!-- Edit Country Section -->
+  <div class="edit-country" *ngIf="editingCountry">
+    <h2>Edit Country</h2>
+    <form (submit)="saveEdit()">
+      <div class="form-group">
+        <label for="editName">Name:</label>
+        <input type="text" class="form-control" id="editName" [(ngModel)]="editingCountry.name" name="editName" required>
+      </div>
+      <div class="form-group">
+        <label for="editISO2">ISO2:</label>
+        <input type="text" class="form-control" id="editISO2" [(ngModel)]="editingCountry.iso2" name="editISO2" required>
+      </div>
+      <div class="form-group">
+        <label for="editISO3">ISO3:</label>
+        <input type="text" class="form-control" id="editISO3" [(ngModel)]="editingCountry.iso3" name="editISO3" required>
+      </div>
+      <button type="submit" class="btn btn-primary">Save</button>
+      <button type="button" class="btn btn-secondary" (click)="cancelEdit()">Cancel</button>
+    </form>
+  </div>
+
+</div>
+
+
+
+
+
