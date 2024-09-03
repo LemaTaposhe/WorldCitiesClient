@@ -42,7 +42,7 @@ Ensure you have the following installed:
 
 1. **Clone the Repository**
    ```bash
-   git clone https://github.com/ChowdhuryMunir/AngularProjectForSpecificApi.git
+   https://github.com/LemaTaposhe/WorldCities_AngularProjectForSpecificApi.git
    cd AngularProjectForSpecificApi
    ```
 
